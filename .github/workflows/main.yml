@@ -34,5 +34,5 @@ jobs:
       - name: Build nginx image and run webserver
         working-directory: dockerfolder
         run: |
-          docker build . -t nginxserver --f DockerFile
+          docker build . -t nginxserver -f DockerFile
           docker run nginxserver
