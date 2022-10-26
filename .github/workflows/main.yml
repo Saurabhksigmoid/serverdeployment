@@ -32,6 +32,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Build nginx image and run webserver
+        working-directory: dockerfolder
         run: |
           docker build -t nginxserver DockerFile
           docker run nginxserver
