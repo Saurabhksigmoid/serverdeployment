@@ -2,4 +2,8 @@ FROM nginx:latest
 
 COPY ./html/index.html /usr/share/nginx/html
 
+RUN cd /usr/share/nginx/html
+
+RUN index.html
+
 EXPOSE 89
