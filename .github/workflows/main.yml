@@ -31,8 +31,14 @@ jobs:
       # run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
-      - name: Build nginx image and run webserver
+      - name: Build and push nginx image
         working-directory: dockerfolder
         run: |
+          echo "${{ secrets.DOCKERPW }}" | docker login -u "saurabhkambli" --password-stdin
           docker build . -t nginxserver -f DockerFile
-          docker run -d -p 80:81 nginxserver
+          docker push saurabhkambli/nginxserverdeployment:v1
+
+      - name: Run webserver
+        working-directory: dockerfolder
+        run: |    
+          docker run -d -p 80:80 saurabhkambli/nginxserverdeployment:v1
