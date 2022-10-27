@@ -35,7 +35,7 @@ jobs:
         working-directory: dockerfolder
         run: |
           echo "${{ secrets.DOCKERPW }}" | docker login -u "saurabhkambli" --password-stdin
-          docker build . -t nginxserver -f DockerFile
+          docker build . -t saurabhkambli/nginxserverdeployment:v1 -f DockerFile
           docker push saurabhkambli/nginxserverdeployment:v1
 
       - name: Run webserver
