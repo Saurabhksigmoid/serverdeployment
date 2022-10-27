@@ -1,6 +1,6 @@
 FROM nginx:latest
 
-COPY dockerfolder/html/index.html /usr/share/nginx/html
+COPY /dockerfolder/html/index.html /usr/share/nginx/html
 
 # RUN cd /usr/share/nginx/html
 
