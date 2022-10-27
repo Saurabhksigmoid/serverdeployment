@@ -1,9 +1,12 @@
 FROM nginx:latest
 
-COPY ./html/index.html /usr/share/nginx/html
+COPY ./dockerfolder/html/index.html /usr/share/nginx/html
 
 # RUN cd /usr/share/nginx/html
 
 # CMD ["nginx" , "-g" , "daemon off;"]
 
-EXPOSE 89
+
+EXPOSE 89 
+
+CMD ["nginx"]
