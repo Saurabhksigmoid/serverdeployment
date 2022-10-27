@@ -35,4 +35,4 @@ jobs:
         working-directory: dockerfolder
         run: |
           docker build . -t nginxserver -f DockerFile
-          docker run -d -p 80:80 nginxserver
+          docker run -d -p 80:81 nginxserver
