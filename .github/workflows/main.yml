@@ -41,4 +41,11 @@ jobs:
       - name: Run webserver
         working-directory: dockerfolder
         run: |    
-          docker run -d -p 80:80 saurabhkambli/nginxserverdeployment:v1
+          minikube start
+          minikube status
+          kubectl apply -f config.yaml
+          kubectl apply -f nginxserver.yaml
+          kubectl get svc
+          minikube ip
+          echo "Assignment completed"
+          
