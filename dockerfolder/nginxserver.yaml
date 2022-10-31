@@ -19,12 +19,16 @@ spec:
         image: saurabhkambli/nginxserverdeployment:v1
         ports:
         - containerPort: 80
+        volumeMounts:
+        - name: www
+          mountPath: /usr/share/nginx/html
         env:
         - name: nginx-url
           valueFrom:
             configMapKeyRef:
               name: nginxserverconfig
               key: nginx-url
+        
 
 ---
 
