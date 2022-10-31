@@ -50,6 +50,7 @@ jobs:
           kubectl get pod
           kubectl get deployments
           kubectl describe deployments
+          kubectl get logs
           minikube ip
           echo "Assignment completed"
           
