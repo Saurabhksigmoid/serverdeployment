@@ -19,12 +19,6 @@ spec:
         image: saurabhkambli/nginxserverdeployment:v1
         ports:
         - containerPort: 80
-        env:
-        - name: nginx-url
-          valueFrom:
-            configMapKeyRef:
-              name: nginxserverconfig
-              key: nginx-url
         
 
 ---

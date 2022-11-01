@@ -44,7 +44,6 @@ jobs:
           minikube start 
           eval $(minikube docker-env)
           minikube status
-          kubectl apply -f config.yaml
           kubectl apply -f nginxserver.yaml
           kubectl get svc
           kubectl get pods
